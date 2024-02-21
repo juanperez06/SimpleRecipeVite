@@ -63,7 +63,8 @@ body {
 }
 
 .app-wrapper {
-  max-width: 480px;
+  max-width: 768px;
+  /* max-width: 480px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,4 +174,40 @@ table tr:last-child{
   #root {
     padding: 0 10px;
   }
+
+  .app-container {
+    width: 100%;
+    display: unset;
+    align-items: unset;
+    justify-content: unset;
+  }
+  
+  .app-wrapper {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    margin: 10px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  p, li {
+    color: rgb(202, 202, 202);
+  }
+
+  h1, h2, h3 {
+    color: #fffdfd;
+  }
+
+  table tr td:first-child {
+    color: #abaaaa;
+  }
+
+  section.preparation-time {
+    background-color: #2f2f2f;
+    padding: 20px;
+  }
+
 }

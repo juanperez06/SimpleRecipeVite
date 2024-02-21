@@ -4,7 +4,7 @@ import heroImg from '/images/image-omelette.jpeg';
 let data = {
     "recipes": [
       {
-        "recipeImg": "/images/image-omelette.jpeg",
+        "recipeImg": "./images/image-omelette.jpeg",
         "recipeTitle": "Simple Omelette Recipe",
         "shortDescription": "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
         "totalPrepTime": "10",
@@ -47,7 +47,7 @@ let data = {
           }
       },
       {
-        "recipeImg": "/images/image-mangu.jpg",
+        "recipeImg": "./images/image-mangu.jpg",
         "recipeTitle": "Dominican Mangu Recipe",
         "shortDescription": "Mangu is a classic Dominican dish made with boiled and mashed green plantains that comes together in just 30 minutes. It’s typically enjoyed as a breakfast, served with eggs, cheese, and sausage, and topped with pickled red onion.",
         "totalPrepTime": "30",
@@ -89,7 +89,7 @@ let data = {
           }
       },
       {
-        "recipeImg": "/images/image-papas-rellenas.webp",
+        "recipeImg": "./images/image-papas-rellenas.webp",
         "recipeTitle": "Papas Rellenas (Stuffed Potato Croquettes)",
         "shortDescription": "his popular Spanish appetizer consists of mashed potato balls stuffed with picadillo filling, deep fried to crispy, creamy perfection. My version of this classic Puerto Rican recipe is not breaded! Papas Rellenas are an impressively tasty dish to serve as an appetizer, side dish, or snack.",
         "totalPrepTime": "60",
@@ -132,7 +132,7 @@ let data = {
           }
       },
       {
-        "recipeImg": "/images/beef-tacos.jpg",
+        "recipeImg": "./images/beef-tacos.jpg",
         "recipeTitle": "Simple Beef Tacos Recipe",
         "shortDescription": "This easy 15-minute meal is fun, tasty and super simple. Beef Tacos are made up of a quick mince filling and your chosen extras in either soft tortilla wraps or hard shells.",
         "totalPrepTime": "15",
@@ -189,8 +189,6 @@ function Recipe(props) {
     
     let currentRecipe = props.currentRecipe || 0;
 
-    console.log(currentRecipe);
-
     const ingredientsList = Object.values(data.recipes[currentRecipe].ingredients);
 
     const instructionsSteps = Object.values(data.recipes[currentRecipe].instructions)
@@ -199,8 +197,6 @@ function Recipe(props) {
 
     let calories = recipeNutrients[0][1], carbs = recipeNutrients[1][1], protein = recipeNutrients[2][1], fat = recipeNutrients[3][1];
 
-
-    console.log(fat);
 
     return(
         <div className='app-container'>  
